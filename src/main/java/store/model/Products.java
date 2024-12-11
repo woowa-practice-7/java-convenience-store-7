@@ -1,11 +1,20 @@
 package store.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Products {
-    private final List<Product> products;
+    private static final Products INSTANCE = new Products();
+    private final List<Product> products = new ArrayList<>();
 
-    public Products(List<Product> products) {
-        this.products = products;
+    private Products() {
+    }
+
+    public static Products getInstance() {
+        return INSTANCE;
+    }
+
+    public void addProduct(Product product) {
+        products.add(product);
     }
 }
