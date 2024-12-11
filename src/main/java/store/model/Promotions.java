@@ -1,11 +1,22 @@
 package store.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Promotions {
-    private final List<Promotion> promotions;
+    private static Promotions INSTANCE = new Promotions();
+    private final List<Promotion> promotions = new ArrayList<>();
 
-    public Promotions(List<Promotion> promotions) {
-        this.promotions = promotions;
+    private Promotions() {
     }
+
+    public static Promotions getInstance() {
+        return INSTANCE;
+    }
+
+    public void addPromotion(Promotion promotion) {
+        promotions.add(promotion);
+    }
+
+
 }
