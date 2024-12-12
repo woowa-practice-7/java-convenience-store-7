@@ -1,11 +1,11 @@
 package store.model.factory;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import store.model.Promotion;
 
 public class PromotionFactory {
-    public static Promotion createPromotion(String name, Integer buy, Integer get, LocalDateTime start_date,
-                                            LocalDateTime end_date) {
-        return new Promotion(name, buy, get, start_date, end_date);
+    public static Promotion createPromotion(String name, Integer buy, Integer get, LocalDate startDate,
+                                            LocalDate endDate) {
+        return new Promotion(name, buy, get, startDate, endDate);
     }
 }

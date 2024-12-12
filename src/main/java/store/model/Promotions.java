@@ -18,5 +18,14 @@ public class Promotions {
         promotions.add(promotion);
     }
 
+    public Promotion findByName(String name) {
+        for (Promotion promotion : promotions) {
+            if (promotion.getName().equals(name)) {
+                return promotion;
+            }
+        }
+        return null;
+    }
+
 
 }
